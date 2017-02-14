@@ -1,0 +1,115 @@
+div.list-container {
+    height: auto;
+    max-height: 400px;
+    width: 500px;
+    overflow-y: scroll;
+}
+ul {
+    padding: 0px;
+    width:100%;
+}
+ul li {
+    background-color: #36304A;
+    padding-left: 5px;
+    border-bottom: 0.5px solid #C3C3C3;
+    line-height: 35px;
+    list-style: none;
+    overflow: hidden;
+    transition: background-color 0.5s;
+}
+
+ul li:hover{
+  border: 0;
+  width:98%;
+  line-height: 30px;
+  height: 31px;
+  box-shadow: 2px 2px cyan;
+}
+
+img.favicon-img {
+    padding-top: 6px;
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+}
+.cont-span {
+    display: inline-flex;
+    width: 460px;
+}
+.tab-title {
+    padding-left: 10px;
+    font-size: 12px;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+span.close-tab{
+  cursor: pointer;
+  padding-right: 15px;
+  float: right;
+}
+span.close-tab img {
+    display: none;
+    padding-right: 5px;
+    padding-top: 10px;
+    width: 15px;
+    height: 15px;
+}
+[draggable] {
+    user-select: none;
+}
+.selected-li{
+  border: 0.5px solid red;
+  opacity: 0.5;``
+}
+input{
+  padding-right: 30px;
+  float:right;
+  margin-top:40px;
+}
+.open-tab{
+  background-color: #1D1631;
+}
+
+.theme-span{
+  width:20px;
+  height:20px;
+  margin-left: 10px;
+  border-radius: 3px;
+}
+
+div.red{
+  float:left;
+  background-color: red;
+}
+
+div.blue{
+  background-color: blue;
+  float:right;
+}
+
+div.grey{
+  background-color: grey;
+  float:right;
+}
+
+div.themes{
+  float:left;
+  display: inline-block;
+}
+
+div.popup-header{
+  width:100%;
+  display: inline-block;
+}
+
+div.search-bar-cont{
+  top:40px;
+  float:right;
+}
+
+div.default{
+  background-color: #36304A;
+  float:right;
+}
