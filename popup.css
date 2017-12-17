@@ -85,26 +85,6 @@ input{
   border-radius: 3px;
 }
 
-div.red{
-  float:left;
-  background-color: red;
-}
-
-div.blue{
-  background-color: blue;
-  float:right;
-}
-
-div.grey{
-  background-color: grey;
-  float:right;
-}
-
-div.themes{
-  float:left;
-  display: inline-block;
-}
-
 div.popup-header{
   width:100%;
   display: inline-block;
