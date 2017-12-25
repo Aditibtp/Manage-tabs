@@ -23,12 +23,17 @@ function dumpAllOpenTabs() {
                 tabImg.src = tabsArray[i].favIconUrl;
                 tabImg.className += "favicon-img";
 
-                var spanTitleEle = document.createElement("p");
+                var pTitleEle = document.createElement("p");
+
+                var closeP = document.createElement("p");
+                closeP.className += "close-p";
+                closeP.innerHTML = "<span class = 'close-tab'>&#x274C;</span>";
                 
-                spanTitleEle.className += ("tab-title");
-                spanTitleEle.innerHTML = tabsArray[i].title + "<span class = 'close-tab'>&#x274C;</span>";
+                pTitleEle.className += ("tab-title");
+                pTitleEle.innerHTML = tabsArray[i].title;
                 liEle.appendChild(tabImg);
-                liEle.appendChild(spanTitleEle); 
+                liEle.appendChild(pTitleEle); 
+                liEle.appendChild(closeP);
                 tabTree.appendChild(liEle);
                 if(tabsArray[i].active){
                     var activeTab = document.querySelector("li#num_"+tabsArray[i].id);
