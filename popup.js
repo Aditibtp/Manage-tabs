@@ -3,7 +3,6 @@ var tabTitles = [];
 var tabId = [];
 var tabid;
 var index;
-var lastColor = "#36304A";
 var tabTree = document.getElementById("tabtree");
 
 function dumpAllOpenTabs() {
@@ -24,10 +23,10 @@ function dumpAllOpenTabs() {
                 tabImg.src = tabsArray[i].favIconUrl;
                 tabImg.className += "favicon-img";
 
-                var spanTitleEle = document.createElement("span");
+                var spanTitleEle = document.createElement("p");
                 
                 spanTitleEle.className += ("tab-title");
-                spanTitleEle.innerHTML = tabsArray[i].title + "<span class = 'close-tab'><img src = '" + imgUrl + "'></span>";
+                spanTitleEle.innerHTML = tabsArray[i].title + "<span class = 'close-tab'>&#x274C;</span>";
                 liEle.appendChild(tabImg);
                 liEle.appendChild(spanTitleEle); 
                 tabTree.appendChild(liEle);
@@ -47,16 +46,20 @@ function dumpAllOpenTabs() {
                 closeImage.addEventListener("click", handleCloseClick, false);
             }
 
-            document.getElementsByTagName("input")[0].addEventListener("keydown", function() {
+            document.getElementsByTagName("input")[0].addEventListener("keyup", function() {
                 var key = event.keyCode || event.charCode;
                 if( key == 8 || key == 46 ){
-                  $("ul#tabtree").find("li").css("display", "block");
+                    for (var i = 0; i < lists.length; i++) {
+                        lists[i].style.display = "block";
+                    }
                 }
+                console.log(key)
                 var inputNode = document.getElementsByTagName("input")[0];
                 var inputQuery = inputNode.value;
                 for (var i = 0; i < tabTitles.length; i++) {
                     if (tabTitles[i].toUpperCase().includes(inputQuery.toUpperCase()) === false) {
-                        var liNode = $("ul#tabtree").find("li[id=" + tabId[i] + "]").css("display", "none");
+                        var liNode = tabTree.querySelector("li[id=num_" + tabId[i] + "]");
+                        liNode.style.display = "none";
                     }
                 }
             }, false);
@@ -84,13 +87,13 @@ function handleListClick(event){
 
 function handleMouseEnter(event){
     var clickedLi = event.currentTarget;
-    var closeImg = clickedLi.querySelector('span.close-tab img');
+    var closeImg = clickedLi.querySelector('span.close-tab');
     closeImg.style.display = "block";
 };
 
 function handleMouseLeave(event){
     var clickedLi = event.currentTarget;
-    var closeImg = clickedLi.querySelector('span.close-tab img');
+    var closeImg = clickedLi.querySelector('span.close-tab');
     closeImg.style.display = "none";
 }
 

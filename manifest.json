@@ -3,7 +3,7 @@
     "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
 
     "name": "Manage Tabs",
-    "description": "This extension shows all the tabs open in chrome window",
+    "description": "Super light chrome extesnsion to show all your open tabs in one click!!",
     "version": "1.0",
 
     "browser_action": {
@@ -18,9 +18,5 @@
         "tabs"
     ],
     "web_accessible_resources": [
-        "images/close.png",
-        "circle.png",
-        "images/circle.png",
-        "images/delete.png"
     ]
 }

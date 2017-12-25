@@ -16,59 +16,61 @@ ul {
 }
 
 ul li {
-    background-color: #fff;
-    padding-left: 5px;
-    border-bottom: 0.5px solid #C3C3C3;
-    line-height: 35px;
-    list-style: none;
-    overflow: hidden;
-    transition: background-color 0.5s;
+  background-color: #fff;
+  padding-left: 5px;
+  border-bottom: 0.5px solid #C3C3C3;
+  line-height: 30px;
+  list-style: none;
+  width: 100%;
+  overflow: hidden;
+  transition: background-color 0.5s;
+}
+
+li:hover:not(.open-tab){
+  background-color: #d6e7ff;
 }
 
 img.favicon-img {
-    padding-top: 6px;
-    width: 20px;
-    height: 20px;
-    vertical-align: text-bottom;
+  padding-top: 6px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: super;
 }
 .cont-span {
     display: inline-flex;
     width: 460px;
 }
 .tab-title {
-    padding-left: 10px;
-    font-size: 12px;
-    color: #370040;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  width: 93%;
+  padding: 0;
+  padding-left: 10px;
+  font-size: 12px;
+  color: #370040;
+  overflow: hidden;
+  margin: 0;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
 }
-span.close-tab{
+span.close-tab {
   cursor: pointer;
-  padding-right: 15px;
+  padding-right: 25px;
   float: right;
   color: #370040;
-}
-span.close-tab img {
-    color: #370040; 
-    display: none;
-    padding-right: 5px;
-    padding-top: 10px;
-    width: 15px;
-    height: 15px;
-    pointer-events: none;
-}
-[draggable] {
-    user-select: none;
-}
-.selected-li{
-  border: 0.5px solid red;
-  opacity: 0.5;
+  display: none;
+  padding-top: 5px;
+  width: 15px;
+  height: 15px;
 }
 input{
+  outline: none;
+  width: 200px;
+  font-size: 12px;
+  height: 25px;
   padding-right: 30px;
-  float:right;
-  margin-top:40px;
+  float: right;
+  margin-top: 40px;
 }
 .open-tab{
   background-color: #370040;
@@ -76,13 +78,6 @@ input{
 
 .open-tab .tab-title, open-tab span.close-tab{
   color: #fff;
-}
-
-.theme-span{
-  width:20px;
-  height:20px;
-  margin-left: 10px;
-  border-radius: 3px;
 }
 
 div.popup-header{
