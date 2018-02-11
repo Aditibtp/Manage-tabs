@@ -1,7 +1,7 @@
 # Manage-tabs
 Chrome extension to manage tabs open in a window
 
-![Extension screenshot](/images/screenshot.png =500x350)
+![Extension screenshot](/images/screenshot.png =500x350?raw=true "Optional Title")
 
 
 Extension now available for download at :
